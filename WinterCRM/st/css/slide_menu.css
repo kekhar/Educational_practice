@@ -1,0 +1,135 @@
+/* Общий вид слад-меню */
+.slide_menu__wrapper {
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 210px;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+/* Потом надо у всех поставить */
+.slide_menu__wrapper-shedule.close {
+    height: 6vh;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    top: 1%;
+    left: 1%;
+}
+
+.slide_menu__wrapper.close {
+    width: 20px;
+}
+
+.slide_menu__inset {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 0 28px;
+    border-bottom: 1px solid #F1F1F4;
+    gap: 28px;
+}
+
+.slide_menu__inset_center {
+    padding: 28px 0;
+    border: none;
+    margin-bottom: 200px;
+}
+
+/* Внутри слайд-меню (slide_menu__card) */
+.slide_menu__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slide_menu-text {
+    color: #8B8BA7;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.4 ease;
+    white-space: nowrap;
+}
+
+.slide_menu__wrapper.close .slide_menu-button,
+.slide_menu__wrapper.close .slide_menu__active-button,
+.slide_menu__wrapper.close .slide_menu-text,
+.slide_menu__wrapper.close .slide_menu__active-button,
+.slide_menu__wrapper.close .slide_menu__active,
+.slide_menu__wrapper.close .slide_menu-svg,
+.slide_menu__wrapper.close .slide_menu__inset {
+    display: none;
+}
+
+/* Кнопки */
+.slide_menu__button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.slide_menu-button {
+    color: #585874;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.slide_menu-button:hover {
+    color: #000;
+}
+
+.slide_menu-calendar-but {
+    padding: 1px 6px 0;
+}
+
+.slide_menu__active {
+    padding: 13px 2px 12px 0;
+    border-radius: 10px;
+    background: #E5F0FF;
+}
+
+.slide_menu__active-button {
+    color: #8A84E2;
+}
+
+.slide_menu__header {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Стрелка чтоб разварачивать */
+.slide_menu-arrow {
+    position: absolute;
+    right: -15%;
+    transform: translateY(50%) rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8A84E2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slide_menu__wrapper.close .slide_menu-arrow {
+    transform: translateY(50%);
+}
+
+.slide_menu__wrapper.close .slide_menu-arrow-service {
+    transform: translateY(35%);
+}
+
+@media (max-width: 768px) {
+    .slide_menu__wrapper-shedule.close {
+        height: 7vh;
+    }
+}

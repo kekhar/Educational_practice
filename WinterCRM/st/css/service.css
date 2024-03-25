@@ -1,0 +1,420 @@
+/* default settings */
+body {
+    background: #F1F1F4;
+    margin: 0;
+    max-width: 1920px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+}
+
+.service__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 0 76px;
+    width: 100%;
+}
+
+/* Вверх сайта */
+.service__header {
+    display: flex;
+    padding: 12px 0 18px 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Настройка для левой стороны header */
+.service__left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.service__search {
+    padding: 4px 0 4px 12px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+    width: 240px;
+}
+
+.service__search-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+/* Для "фильтра" и "сортировки" */
+.service-filter {
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    height: 32px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.service-sortirovka {
+    width: 124px;
+}
+
+/* Параметры текста клиентов */
+.service-score {
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Таблица */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+td,
+th,
+tr {
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+/* Верхняя строчка таблицы */
+.table__header th {
+    padding: 12px 16px;
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+    align-items: center;
+    background: #F9FAFB;
+}
+
+/* Контент таблички */
+.table__content {
+    background-color: #FFF;
+    align-items: center;
+}
+
+.table__content th {
+    background-color: #FFF;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 16px 24px;
+}
+
+.content-1 {
+    color: #6B7280;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px
+}
+
+/* Для модалки */
+.mdlbutton {
+    width: 137px;
+    height: 32px;
+    background: white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: 1px #E5E7EB solid;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.mdlbutton:hover {
+    background-color: #c0c0c0;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.modal-container {
+    padding-top: 15px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal {
+    background-color: #fefefe;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.modal__wrapper {
+    padding: 25px 0px 25px 65px;
+    overflow-y: scroll;
+}
+
+/* Для "Добавить сервис" контент */
+.create__service {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.item {
+    height: 30px;
+    width: 200px;
+    background-color: #FCFCFD;
+    border-radius: 12px;
+    border: 2px #DFDFE6 solid;
+    text-align: center;
+}
+
+.create__service_item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.create__service_item select,
+.create__service_item input[type="date"] {
+    height: 30px;
+    width: 200px;
+    background-color: #FCFCFD;
+    border-radius: 12px;
+    border: 2px #DFDFE6 solid;
+    text-align: center;
+}
+
+.create__service_item-2 {
+    display: flex;
+    align-items: center;
+    gap: 95px;
+}
+
+.create__service_item label,
+.create__service_item-2 label {
+    color: #87898E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+}
+
+.create__service-button {
+    background: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #3772FF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    width: 234px;
+    text-align: center;
+    color: #FFF;
+    padding: 20px 0;
+}
+
+.create__service-button:hover {
+    color: #000;
+}
+
+/* switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 40px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-slider::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    left: 4px;
+    bottom: 4px;
+    height: 26px;
+    width: 26px;
+    background-color: #FFF;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-input:focus+.switch-slider {
+    box-shadow: 0px 0px 4px rgba(97, 97, 97, 0.08);
+}
+
+.switch-input:checked+.switch-slider {
+    background-color: #3772FF;
+}
+
+.switch-input:checked+.switch-slider::before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.table-colon2 {
+    font-weight: 400;
+}
+
+.table-colon {
+    padding: 10px 10px;
+    color: #1E293B;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.delServiceBtn {
+    background: none;
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    background: #3772FF;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.delServiceBtn:hover {
+    color: #000;
+    background: #2062fc;
+}
+
+.status-list {
+    width: 108px;
+    padding: 1px 1px;
+}
+
+@media (max-width: 1150px) {
+    .table__header th {
+        padding: 8px;
+    }
+
+    .table-colon {
+        padding: 7px 6px;
+        font-size: 14px;
+    }
+
+    .status-list {
+        width: 89px;
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 300px) {
+    .modal {
+        width: 95%;
+    }
+}
+
+@media (min-width: 370px) {
+    .modal {
+        width: 350px;
+    }
+}
+
+@media (max-width: 951px) {
+    .slide_menu__wrapper.close {
+        height: 5vh;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        top: 1%;
+        left: 1%;
+    }
+
+    .service__wrapper {
+        padding: 0 11px;
+    }
+
+    .service__header {
+        padding: 26px 0 26px 60px;
+    }
+}
+
+@media (max-width: 811px) {
+    .table-colon {
+        padding: 7px 2px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 751px) {
+    .delServiceBtn {
+        font-size: 11px;
+        width: 60px;
+        height: 28px;
+    }
+
+    .table-colon {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 731px) {
+    .service__wrapper {
+        padding: 0 3px;
+    }
+}
+
+@media (max-width: 600px) {
+    .service__header {
+        padding: 26px 1px 26px 1px;
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+
+    .service__filter {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .service__search {
+        width: 180px;
+    }
+}

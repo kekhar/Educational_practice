@@ -1,0 +1,329 @@
+/* default settings */
+body {
+    background: #F1F1F4;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+.shop__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 0 76px;
+    width: 100%;
+}
+
+/* Вверх сайта */
+.shop__header {
+    display: flex;
+    padding: 12px 0 18px 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Настройка для левой стороны header */
+.shop__left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.shop__right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.shop__search {
+    padding: 4px 0 4px 12px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+    width: 240px;
+}
+
+.shop__search-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+/* Для "фильтра" и "сортировки" */
+.shop-filter {
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    height: 32px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.shop-sortirovka {
+    width: 124px;
+}
+
+/* Параметры текста клиентов */
+.shop-score {
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Таблица */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+td,
+th,
+tr {
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+/* Верхняя строчка таблицы */
+.table__header {
+    align-items: center;
+    background: #F9FAFB;
+}
+
+.table__header th {
+    padding: 12px 24px;
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.th-1 {
+    border-radius: 20px 0 0 0;
+}
+
+.th-2 {
+    border-radius: 0 20px 0 0;
+}
+
+/* Модал */
+.mdlbutton {
+    width: 147px;
+    height: 32px;
+    background: white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: 1px #E5E7EB solid;
+    font-weight: bolder;
+    text-align: center;
+    padding: 4px 8px;
+}
+
+.mdlbutton:hover {
+    background-color: rgb(196, 194, 194);
+}
+
+.modal__list-header {
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    z-index: 1;
+}
+
+.modal-container {
+    background-color: #fefefe;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.modal__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    padding: 16px 24px;
+    text-align: center;
+    background: #FFF;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.td-button {
+    background: none;
+    border-radius: 10px;
+    background: #3772FF;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.td-button:hover {
+    color: #000;
+    background: #2062fc;
+}
+
+/* form */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 16px 16px 30px;
+    background: #FCFCFD;
+    border-radius: 12px;
+    border: 2px #DFDFE6 solid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    margin-bottom: 30px;
+}
+
+#addItemForm input[type="submit"] {
+    background: none;
+    width: 100%;
+    height: 66px;
+    padding: 20px 0px;
+    border-radius: 10px;
+    background: #3772FF;
+    color: #FFF;
+}
+
+input[id="addQuantityBtn"] {
+    background: none;
+    width: 100%;
+    height: 66px;
+    padding: 20px 0px;
+    border-radius: 10px;
+    background: #3772FF;
+    color: #FFF;
+}
+
+#addItemForm input[type="submit"]:hover {
+    color: #000;
+    background: #2062fc;
+}
+
+.list-header-2 {
+    font-size: 24px;
+}
+
+@media (max-width: 755px) {
+    td {
+        padding: 10px 6px;
+    }
+
+    .td-button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 680px) {
+    .slide_menu__wrapper.close {
+        height: 7vh;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        top: 1%;
+        left: 1%;
+    }
+
+    .shop__wrapper {
+        padding: 0 3px;
+    }
+
+    .shop__header {
+        flex-direction: column-reverse;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 590px) {
+    .table__header th {
+        font-size: 10px;
+        padding: 7px 4px;
+    }
+
+    td {
+        font-size: 14px;
+        line-height: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .td-button {
+        padding: 3px 5px;
+    }
+}
+
+@media (max-width: 420px) {
+    td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .shop__search {
+        width: 190px;
+        height: 18px;
+    }
+}
+
+@media (min-width: 350px) {
+    .modal-container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 557px) {
+    .modal-container {
+        width: 500px;
+    }
+}

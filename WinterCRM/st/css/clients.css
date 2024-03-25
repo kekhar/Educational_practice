@@ -1,0 +1,397 @@
+/* default settings */
+body {
+    background: #F1F1F4;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+/* Центр сайта */
+.clients__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 0 76px;
+    width: 100%;
+}
+
+/* Вверх сайта */
+.clients__header {
+    display: flex;
+    padding: 12px 0 18px 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Настройка для левой стороны header */
+.clients__left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.clients__search {
+    padding: 4px 0 4px 12px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+    width: 240px;
+}
+
+.clients__search-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+/* Для "фильтра" и "сортировки" */
+.clients-filter {
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+    padding: 4px 5px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    height: 32px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.clietns-sortirovka {
+    width: 124px;
+}
+
+/* Параметры текста клиентов */
+.clients-score {
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Таблица */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+td,
+th,
+tr {
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.table__header th {
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 12px;
+    align-items: center;
+    text-align: start;
+    padding: 10px 16px;
+    background: #F9FAFB;
+    text-align: center;
+}
+
+.th-1 {
+    border-radius: 20px 0 0 0;
+}
+
+.th-2 {
+    border-radius: 0 20px 0 0;
+}
+
+/* Параметры для колонок */
+.table-colon2 {
+    font-weight: 400;
+}
+
+.table-colon {
+    padding: 10px 16px;
+    color: #1E293B;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+/* Центрирование input */
+.addItemForm {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    background: #FCFCFD;
+    border-radius: 5px;
+    border: 2px #DFDFE6 solid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+/* Центрирование кнопки "Добавить" */
+#addItemForm input[type="submit"], #ChangeItemForm input[type="submit"] {
+    background: none;
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    border-radius: 10px;
+    background: #3772FF;
+    color: #FFF;
+}
+
+#addItemForm input[type="submit"]:hover, #ChangeItemForm input[type="submit"]:hover {
+    color: #000;
+    background: #2062fc;
+}
+
+
+.mdlbutton {
+    width: 137px;
+    height: 32px;
+    background: white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: 1px #E5E7EB solid;
+    font-weight: bolder;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mdlbutton:hover {
+    background-color: #c0c0c0;
+}
+
+.delSelectedBtn {
+    background: white;
+    height: 32px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: 1px #E5E7EB solid;
+    font-weight: bolder;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delSelectedBtn:hover {
+    background-color: #c0c0c0;
+}
+
+.delete-button, .change-button {
+    width: 87px;
+    height: 35px;
+    background: white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: 1px #E5E7EB solid;
+    font-weight: bolder;
+    align-items: center;
+}
+
+.delete-button:hover, .change-button:hover {
+    background-color: #c0c0c0;
+}
+
+.btn-editAndDelete {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.clients__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* для 1 строчки label с input */
+.form-flex {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 13px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 910px) {
+    .clients__header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .clients__left {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 867px) {
+    .table-colon {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .delete-button {
+        width: 80px;
+        padding: 1px 1px 1px 3px;
+    }
+
+    .btn-editAndDelete {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 797px) {
+    .slide_menu__wrapper.close {
+        height: 7vh;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        top: 1%;
+        left: 1%;
+    }
+
+    .clients__wrapper {
+        padding: 0 24px 0 11px;
+    }
+}
+
+@media (max-width: 761px) {
+    .table__header th {
+        font-size: 13px;
+        padding: 8px 9px 5px 5px;
+    }
+}
+
+@media (max-width: 698px) {
+    .table-colon {
+        font-size: 12px;
+    }
+
+    .delete-button {
+        width: 70px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 625px) {
+    .table__header th {
+        font-size: 10px;
+        padding: 1px 5px 1px 1px;
+    }
+
+    .clients__wrapper {
+        padding: 0 3px;
+    }
+
+}
+
+@media (max-width: 595px) {
+    .table-colon {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+
+    .delete-button {
+        width: 57px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 500px) {
+    .table-colon {
+        padding: 7px 4px;
+    }
+
+    .delSelectedBtn {
+        font-size: 10px;
+    }
+
+    .mdlbutton {
+        font-size: 10px;
+        width: 105px;
+    }
+
+    .clietns-sortirovka {
+        font-size: 10px;
+        width: 97px;
+    }
+
+    .modal-header {
+        font-size: 17px;
+    }
+
+    .form-flex {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 425px) {
+    .clients__search {
+        width: 190px;
+        height: 25px;
+    }
+}
+
+@media (min-width: 300px) {
+    .modal-content {
+        width: 75%;
+    }
+}
+
+@media (min-width: 627px) {
+    .modal-content {
+        width: 470px;
+    }
+}

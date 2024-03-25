@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/slide_menu.css" />
+    <link rel="stylesheet" href="/static/css/modal-window.css" />
+    <link rel="stylesheet" href="/static/css/statistics.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <title>Инвентарь</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <nav class="slide_menu__wrapper close">
+        <div class="slide_menu__header">
+          <div class="slide_menu-arrow toggle">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12h12m0 0-5-5m5 5-5 5"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="slide_menu__inset">
+          <div class="slide_menu__card">
+            <div class="slide_menu-headling">
+              <div class="slide_menu-text">Статистика</div>
+            </div>
+            <div class="slide_menu__button slide_menu__active">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="16"
+                fill="none"
+              >
+                <path
+                  d="M16.735 13.324h-.313V1.136A.938.938 0 0 0 15.484.2H11.11a.938.938 0 0 0-.938.937V3.95H6.734a.938.938 0 0 0-.937.937V7.7H2.985a.938.938 0 0 0-.938.937v4.688h-.313a.938.938 0 1 0 0 1.875h15a.938.938 0 0 0 0-1.875Zm-4.688-11.25h2.5v11.25h-2.5V2.074Zm-4.375 3.75h2.5v7.5h-2.5v-7.5Zm-3.75 3.75h1.875v3.75H3.922v-3.75Z"
+                  fill="#8A84E2"
+                />
+              </svg>
+              <a href="#"
+                ><button class="slide_menu-button slide_menu__active-button">
+                  Статистика
+                </button></a
+              >
+            </div>
+          </div>
+          <div class="slide_menu__card">
+            <div class="slide_menu-headling">
+              <div class="slide_menu-text">Клиенты</div>
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="M9.78 12.26a5 5 0 1 0-6.435 0 7.831 7.831 0 0 0-3.085 2.5.938.938 0 0 0 1.512 1.11 5.937 5.937 0 0 1 9.581 0 .938.938 0 1 0 1.513-1.11 7.84 7.84 0 0 0-3.086-2.5ZM3.438 8.439a3.125 3.125 0 1 1 6.25 0 3.125 3.125 0 0 1-6.25 0Zm16.101 7.63a.937.937 0 0 1-1.31-.2 5.963 5.963 0 0 0-4.791-2.43.938.938 0 0 1 0-1.876 3.125 3.125 0 1 0-1.16-6.028.938.938 0 1 1-.697-1.74 5 5 0 0 1 5.078 8.467 7.831 7.831 0 0 1 3.085 2.5.938.938 0 0 1-.205 1.307Z"
+                  fill="#A8A8BD"
+                />
+              </svg>
+              <a href="/clients"
+                ><button class="slide_menu-button">Клиенты</button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="slide_menu__inset">
+          <div class="slide_menu__card">
+            <div class="slide_menu-headling">
+              <div class="slide_menu-text">Продукция</div>
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="M17.625 4.894 10.75 1.13a1.555 1.555 0 0 0-1.5 0L2.375 4.894a1.563 1.563 0 0 0-.813 1.37v7.471a1.563 1.563 0 0 0 .813 1.371L9.25 18.87a1.554 1.554 0 0 0 1.5 0l6.875-3.763a1.563 1.563 0 0 0 .813-1.37V6.264a1.562 1.562 0 0 0-.813-1.371ZM10 2.857l5.625 3.08L10 9.017 4.375 5.937 10 2.857ZM3.437 7.562l5.626 3.078v5.99l-5.626-3.08V7.562Zm7.5 9.068v-5.99l5.626-3.078v5.988l-5.625 3.08Z"
+                  fill="#A8A8BD"
+                />
+              </svg>
+              <a href="/inventory"
+                ><button class="slide_menu-button">Инвентарь</button></a
+              >
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="M7.813 16.875a1.563 1.563 0 1 1-3.126 0 1.563 1.563 0 0 1 3.125 0Zm6.562-1.563a1.563 1.563 0 1 0 0 3.126 1.563 1.563 0 0 0 0-3.125Zm4.021-9.411-2.132 6.93a2.179 2.179 0 0 1-2.091 1.544H6.479a2.198 2.198 0 0 1-2.104-1.587l-2.671-9.35H.938a.937.937 0 1 1 0-1.876h1.001a1.569 1.569 0 0 1 1.502 1.134l.57 1.991H17.5a.938.938 0 0 1 .896 1.214Zm-2.166.662H4.546l1.632 5.71a.312.312 0 0 0 .3.227h7.695a.313.313 0 0 0 .299-.22l1.758-5.717Z"
+                  fill="#A8A8BD"
+                />
+              </svg>
+              <a href="/shop"
+                ><button class="slide_menu-button">Магазин</button></a
+              >
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="m16.913 6.213-4.375-4.375a.938.938 0 0 0-.663-.276h-7.5a1.562 1.562 0 0 0-1.563 1.563v13.75a1.563 1.563 0 0 0 1.563 1.563h11.25a1.563 1.563 0 0 0 1.563-1.563v-10a.937.937 0 0 0-.275-.662ZM12.5 4.453l1.797 1.797H12.5V4.453Zm-7.813 12.11V3.438h5.938v3.75a.938.938 0 0 0 .938.937h3.75v8.438H4.687Z"
+                  fill="#A8A8BD"
+                />
+              </svg>
+              <a href="/rents"
+                ><button class="slide_menu-button">Заказы</button></a
+              >
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#A8A8BD"
+                  d="M12 14ZM2 20V10q0-.825.588-1.413T4 8h3V6q0-.825.588-1.413T9 4h6q.825 0 1.413.588T17 6v2h3q.825 0 1.413.588T22 10v10H2Zm6-5v1H6v-1H4v3h16v-3h-2v1h-2v-1H8Zm-4-5v3h2v-1h2v1h8v-1h2v1h2v-3H4Zm5-2h6V6H9v2Z"
+                />
+              </svg>
+              <a href="/service"
+                ><button class="slide_menu-button">Сервис</button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="slide_menu__inset slide_menu__inset_center">
+          <div class="slide_menu__card">
+            <div class="slide_menu-headling">
+              <div class="slide_menu-text">Сотрудники</div>
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="M18.31 16.406a9.636 9.636 0 0 0-4.747-4.158 5.937 5.937 0 1 0-7.126 0 9.637 9.637 0 0 0-4.748 4.158.937.937 0 1 0 1.623.938c1.415-2.447 3.915-3.907 6.688-3.907 2.773 0 5.273 1.46 6.688 3.907a.938.938 0 0 0 1.623-.938ZM5.939 7.5a4.062 4.062 0 1 1 8.124 0 4.062 4.062 0 0 1-8.124 0Z"
+                  fill="#A8A8BD"
+                />
+              </svg>
+              <a href="/employees"
+                ><button class="slide_menu-button">Сотрудники</button></a
+              >
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="M3 2.35c0-.62.26-1.22.71-1.66A2.47 2.47 0 0 1 5.43 0h9.72a2.47 2.47 0 0 1 1.72.69c.45.44.7 1.04.7 1.66v11.63l-1.2 1.19V2.35c0-.3-.14-.6-.36-.83a1.24 1.24 0 0 0-.86-.34H5.43c-.32 0-.63.12-.86.34-.23.22-.36.52-.36.83v14.12c0 .32.13.61.36.84.23.22.54.34.86.34h4.96c.09.23.23.46.42.65l.54.53H5.43a2.47 2.47 0 0 1-1.72-.7A2.32 2.32 0 0 1 3 16.48V2.35Zm4.86 1.77c0 .31-.13.6-.36.83a1.24 1.24 0 0 1-1.71 0 1.16 1.16 0 0 1-.36-.83c0-.31.13-.61.35-.83a1.24 1.24 0 0 1 1.72 0c.23.22.36.52.36.83Zm1.82-.59a.62.62 0 0 0-.43.17.58.58 0 0 0 0 .83c.12.11.27.18.43.18h4.86a.62.62 0 0 0 .43-.18.58.58 0 0 0 0-.83.62.62 0 0 0-.43-.17H9.68Zm0 4.7a.62.62 0 0 0-.43.18.58.58 0 0 0 0 .83c.12.11.27.17.43.17h4.86a.62.62 0 0 0 .43-.17.58.58 0 0 0 0-.83.62.62 0 0 0-.43-.17H9.68Zm-.6 5.3a.58.58 0 0 1 .17-.41.62.62 0 0 1 .43-.18h4.86c.16 0 .32.07.43.18a.58.58 0 0 1 0 .83.62.62 0 0 1-.43.17H9.68a.62.62 0 0 1-.43-.17.58.58 0 0 1-.18-.42ZM6.63 10c.33 0 .64-.12.86-.34.23-.22.36-.52.36-.83 0-.32-.13-.62-.36-.84a1.24 1.24 0 0 0-.86-.34c-.32 0-.63.12-.86.34a1.16 1.16 0 0 0 0 1.67c.23.22.54.34.86.34Zm0 4.7c.33 0 .64-.12.86-.34a1.16 1.16 0 0 0 0-1.66 1.24 1.24 0 0 0-.86-.35c-.32 0-.63.13-.86.35a1.16 1.16 0 0 0 0 1.66c.23.22.54.35.86.35Zm13.19.42a.58.58 0 0 0-.01-.82.62.62 0 0 0-.85 0l-4.43 4.32-2-1.97a.6.6 0 0 0-.43-.18.63.63 0 0 0-.43.17.59.59 0 0 0-.18.41.57.57 0 0 0 .18.42l2.34 2.32a.73.73 0 0 0 .52.21.75.75 0 0 0 .52-.21l4.77-4.67Z"
+                  fill="#ADADC1"
+                />
+              </svg>
+              <a href="/tasks"
+                ><button class="slide_menu-button">Задачи</button></a
+              >
+            </div>
+            <div class="slide_menu__button">
+              <svg
+                class="slide_menu-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="M1.667 10c0-3.143 0-4.714.976-5.69.976-.977 2.548-.977 5.69-.977h3.334c3.142 0 4.714 0 5.69.977.976.976.976 2.548.976 5.69v1.667c0 3.142 0 4.714-.976 5.69s-2.548.976-5.69.976H8.333c-3.142 0-4.714 0-5.69-.976s-.976-2.548-.976-5.69V10Z"
+                  stroke="#ADADC1"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M5.833 3.333v-1.25m8.334 1.25v-1.25M2.083 7.5h15.834"
+                  stroke="#ADADC1"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M15 14.167a.833.833 0 1 1-1.666 0 .833.833 0 0 1 1.666 0Zm0-3.334a.833.833 0 1 1-1.667 0 .833.833 0 0 1 1.667 0Zm-4.167 3.334a.834.834 0 1 1-1.667 0 .834.834 0 0 1 1.667 0Zm0-3.334a.834.834 0 1 1-1.667 0 .834.834 0 0 1 1.667 0Zm-4.166 3.334a.833.833 0 1 1-1.667 0 .833.833 0 0 1 1.667 0Zm0-3.334a.833.833 0 1 1-1.667 0 .833.833 0 0 1 1.667 0Z"
+                  fill="#ADADC1"
+                />
+              </svg>
+              <a href="/schedule">
+                <button class="slide_menu-button slide_menu-calendar-but">
+                  Календарь
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="statistics__wrapper">
+        <div class="clients__header">
+          <div class="clients__container">
+            <!-- Left Block -->
+            <div class="clients__left">
+              <div class="clients__search">
+                <div class="main-container">
+                  <!-- First Block -->
+                  <div class="first-block">
+                    <div class="number-container">
+                      <div class="number" id="rent-count">Загрузка...</div>
+                    </div>
+                  </div>
+
+                  <!-- Second Block -->
+                  <div class="second-block">
+                    <div class="icon-container">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#8A84E2"
+                          d="M12 14ZM2 20V10q0-.825.588-1.413T4 8h3V6q0-.825.588-1.413T9 4h6q.825 0 1.413.588T17 6v2h3q.825 0 1.413.588T22 10v10H2Zm6-5v1H6v-1H4v3h16v-3h-2v1h-2v-1H8Zm-4-5v3h2v-1h2v1h8v-1h2v1h2v-3H4Zm5-2h6V6H9v2Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="order-text">Заказов(Всего)</div>
+                  </div>
+                </div>
+                <div class="main-container">
+                  <!-- First Block -->
+                  <div class="first-block">
+                    <div class="number-container">
+                      <div class="number" id="client-count">Загрузка...</div>
+                    </div>
+                  </div>
+
+                  <!-- Second Block -->
+                  <div class="second-block">
+                    <div class="icon-container">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.78 12.26a5 5 0 1 0-6.435 0 7.831 7.831 0 0 0-3.085 2.5.938.938 0 0 0 1.512 1.11 5.937 5.937 0 0 1 9.581 0 .938.938 0 1 0 1.513-1.11 7.84 7.84 0 0 0-3.086-2.5ZM3.438 8.439a3.125 3.125 0 1 1 6.25 0 3.125 3.125 0 0 1-6.25 0Zm16.101 7.63a.937.937 0 0 1-1.31-.2 5.963 5.963 0 0 0-4.791-2.43.938.938 0 0 1 0-1.876 3.125 3.125 0 1 0-1.16-6.028.938.938 0 1 1-.697-1.74 5 5 0 0 1 5.078 8.467 7.831 7.831 0 0 1 3.085 2.5.938.938 0 0 1-.205 1.307Z"
+                          fill="#8A84E2"
+                        />
+                      </svg>
+                    </div>
+                    <div class="order-text" id="client-count">
+                      Клиентов(Всего)
+                    </div>
+                  </div>
+                </div>
+                <div class="main-container">
+                  <!-- First Block -->
+                  <div class="first-block">
+                    <div class="number-container">
+                      <div class="number" id="shop-count">Загрузка...</div>
+                    </div>
+                  </div>
+
+                  <!-- Second Block -->
+                  <div class="second-block">
+                    <div class="icon-container">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        fill="none"
+                      >
+                        <path
+                          d="m16.913 6.213-4.375-4.375a.938.938 0 0 0-.663-.276h-7.5a1.562 1.562 0 0 0-1.563 1.563v13.75a1.563 1.563 0 0 0 1.563 1.563h11.25a1.563 1.563 0 0 0 1.563-1.563v-10a.937.937 0 0 0-.275-.662ZM12.5 4.453l1.797 1.797H12.5V4.453Zm-7.813 12.11V3.438h5.938v3.75a.938.938 0 0 0 .938.937h3.75v8.438H4.687Z"
+                          fill="#8A84E2"
+                        />
+                      </svg>
+                    </div>
+                    <div class="order-text">Продаж(Всего)</div>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas
+                    id="rentCountChart"
+                    style="padding-top: 15px"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/static/js/statistics.js"></script>
+    </main>
+  </body>
+</html>
